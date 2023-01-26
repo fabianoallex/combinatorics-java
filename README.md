@@ -14,7 +14,7 @@
                 .build()
                 .forEachArrangement(System.out::println);
 
-        System.out.println("Arrangement of [1, 2, 3] with filter (sum == 11) and resulta size 5");
+        System.out.println("Arrangement of [1, 2, 3] with filter (sum == 11) and resulta size 4");
         Combinatorics.of(Arrays.asList(1, 2, 3))
                 .withResultSize(4)
                 .withFilter(integers -> integers.stream().mapToInt(Integer::intValue).sum() == 11)
@@ -61,7 +61,7 @@ Arrangement of [a, b] with result size 3
 [b, a, b]
 [b, b, a]
 [b, b, b]
-Arrangement of [1, 2, 3] with filter (sum == 11) and resulta size 5
+Arrangement of [1, 2, 3] with filter (sum == 11) and resulta size 4
 [2, 3, 3, 3]
 [3, 2, 3, 3]
 [3, 3, 2, 3]
