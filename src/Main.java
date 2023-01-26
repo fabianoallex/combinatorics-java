@@ -19,7 +19,7 @@ public class Main {
         System.out.println("Arrangement of [1, 2, 3] with filter (sum == 11) and resulta size 5");
         Combinatorics.of(Arrays.asList(1, 2, 3))
                 .withResultSize(4)
-                .withFilter((List<Integer> result) -> result.stream().mapToInt(Integer::intValue).sum() == 11)
+                .withFilter(integers -> integers.stream().mapToInt(Integer::intValue).sum() == 11)
                 .build()
                 .forEachArrangement(System.out::println);
 
