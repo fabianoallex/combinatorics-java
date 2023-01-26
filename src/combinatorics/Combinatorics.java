@@ -27,9 +27,8 @@ public class Combinatorics<T> {
 
     private void forEachArrangementHelper(List<T> elements, List<T> array, int index, int size, Consumer<List<T>> callback) {
         if (index == size) {
-            if (validator == null || validator.test(array)) {
+            if (validator == null || validator.test(array))
                 callback.accept(array);
-            }
             return;
         }
         for (int i = 0; i < elements.size(); i++) {
@@ -46,9 +45,8 @@ public class Combinatorics<T> {
 
     private void forEachPermutationHelper(List<T> elements, List<T> array, int index, int size, Consumer<List<T>> callback) {
         if (index == size) {
-            if (validator == null || validator.test(array)) {
+            if (validator == null || validator.test(array))
                 callback.accept(array);
-            }
             return;
         }
         for (int i = 0; i < elements.size(); i++) {
@@ -67,9 +65,8 @@ public class Combinatorics<T> {
 
     private void forEachCombinationHelper(List<T> elements, List<T> array, int index, int start, int size, Consumer<List<T>> callback) {
         if (index == size) {
-            if (validator == null || validator.test(array)) {
+            if (validator == null || validator.test(array))
                 callback.accept(array);
-            }
             return;
         }
         for (int i = start; i < elements.size(); i++) {
@@ -78,7 +75,6 @@ public class Combinatorics<T> {
             array.remove(index);
         }
     }
-
 
     public static class Builder<T> {
         private final List<T> elements;
